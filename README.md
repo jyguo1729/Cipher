@@ -4,12 +4,17 @@ How to use:
 
 Run ```CipherGenerator.py```, then enter your text
 
-For RSA ciphers
+## RSA cipher
 Generate:
+
 Generate a pair of public key `e`,`n` and private key `d`,`n`
+
 Encrypt text: 
+
 Use public key `e`,`n` to encrypt
+
 Decrypt text:
+
 Use public key `e`,`n` to encrypt
 
 Warning:
