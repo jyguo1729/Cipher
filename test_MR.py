@@ -34,7 +34,7 @@ t.add(is_MRnonwitness,[3,25,False])
 
         
 def test_generate_prime(data):
-    out=generate_prime(data[0])
+    out=generate_prime(*data)
     if data[0]==1:
         return False
     elif data[0]==2:

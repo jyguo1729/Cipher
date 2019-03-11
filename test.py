@@ -35,9 +35,12 @@ class Test:#designed to test function with fixed number of arugument and with no
     
     def __init__(self):
         self.data={}
-        self.tested_fun={}
-        self.tester_fun={}
-    
+        self.tested_funs={}
+        self.tester_funs={}
+    def list(self):
+        print(self.tested_funs)
+        print(self.tester_funs)
+        print(self.data)
     def regist(self,fun):
         if re.match(r'test_',fun.__name__):
             self.tester_funs[fun.__name__]=fun
@@ -75,7 +78,7 @@ class Test:#designed to test function with fixed number of arugument and with no
                    
                     if not self.tester_funs['test_'+fun_name](test_data):
                         error=True
-                        logs.append("function "+fun_name+' has error with input '+str(test_data)+' and output'+str(true_output))
+                        logs.append("function "+fun_name+' has error with input '+str(test_data)+' and output'+str(self.tested_funs[fun_name](*test_data)))
                 elif len(test_data)==len(para)+1:
                     true_output=self.tested_funs[fun_name](*test_data[:-1])
                     if not self.tester_funs['test_'+fun_name](test_data[-1],true_output):
