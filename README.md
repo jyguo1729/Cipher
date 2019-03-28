@@ -27,6 +27,6 @@ More ciphers will be supported soon!
 
 TODO:
 - Exclude some combinition of e and n which may crack this algorithm. 
-- try to demonstrate to crack this algorithm when bits for `n` is small.
+- try to demonstrate how to crack this algorithm when bits for `n` is small.
 
 
